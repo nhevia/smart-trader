@@ -1,0 +1,27 @@
+
+lib-cov
+*.seed
+*.log
+*.csv
+*.dat
+*.out
+*.pid
+*.gz
+*.swp
+
+pids
+logs
+results
+tmp
+coverage
+dist
+
+node_modules
+.env
+/out
+smart-trader*
+Smart Trader
+SmartTrader*
+env.json
+public
+public*

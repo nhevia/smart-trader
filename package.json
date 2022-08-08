@@ -1,0 +1,127 @@
+{
+  "name": "smart-trader",
+  "version": "1.8.0",
+  "description": "A cryptocurrency service provider interface",
+  "productName": "SmartTrader",
+  "main": "electron.js",
+  "build": {
+    "appId": "com.smarttrader.smarttrader"
+  },
+  "scripts": {
+    "start": "electron .",
+    "dev": "concurrently \"webpack --watch --display=minimal --info-verbosity none\" \"electron .\"",
+    "build": "rimraf ./public && mkdir public && webpack --progress",
+    "package": "electron-packager ./public --arch=x64 --platform=darwin,linux,win32 --overwrite --icon=packaging/icon.ico",
+    "pub-build": "npm run build && npm run pub-copyfiles",
+    "pub-copyfiles": "cp -r ./routes ./utils *.js *.json ./packaging/* ./public && rimraf ./public/package-lock.json ./public/webpack.config.js && npm run pub-install",
+    "pub-install": "npm install --legacy-peer-deps --prefix ./public --production && rimraf ./public/package-lock.json && npm run pub-ob",
+    "pub-ob": "bash obs.sh && npm run pub-package",
+    "pub-package": "npm run package"
+  },
+  "repository": "https://github.com/nhevia/smart-trader",
+  "keywords": [
+    "trader",
+    "cryptocurrency",
+    "binance",
+    "electron",
+    "crypto"
+  ],
+  "author": "Nicolas Hevia",
+  "devDependencies": {
+    "@babel/core": "7.12.9",
+    "@babel/eslint-parser": "^7.12.13",
+    "@babel/eslint-plugin": "^7.12.13",
+    "@babel/plugin-proposal-class-properties": "7.12.1",
+    "@babel/plugin-transform-runtime": "^7.12.15",
+    "@babel/preset-env": "7.12.7",
+    "@babel/preset-react": "^7.12.7",
+    "@svgr/webpack": "^5.5.0",
+    "babel-loader": "8.2.1",
+    "babel-preset-es2015": "6.24.1",
+    "concurrently": "5.3.0",
+    "copy-webpack-plugin": "6.3.2",
+    "css-loader": "3.6.0",
+    "electron": "^11.5.0",
+    "electron-builder": "^22.9.1",
+    "electron-packager": "^15.2.0",
+    "electron-reloader": "^1.2.0",
+    "electron-webpack": "^2.8.2",
+    "eslint-config-babel": "^9.0.0",
+    "eslint-config-prettier": "^6.10.0",
+    "eslint-plugin-import": "^2.20.0",
+    "eslint-plugin-prettier": "^3.1.2",
+    "eslint-plugin-react": "^7.18.0",
+    "eslint-plugin-standard": "^4.0.1",
+    "extract-text-webpack-plugin": "3.0.2",
+    "file-loader": "6.2.0",
+    "html-webpack-plugin": "4.5.0",
+    "javascript-obfuscator": "^2.10.3",
+    "postcss": "7.0.32",
+    "postcss-cssnext": "3.1.0",
+    "postcss-import": "12.0.1",
+    "postcss-load-config": "2.1.0",
+    "postcss-loader": "3.0.0",
+    "postcss-nesting": "7.0.1",
+    "prettier": "^2.2.1",
+    "recursive-readdir": "^2.2.2",
+    "response-time": "^2.3.2",
+    "sass": "^1.32.6",
+    "sass-loader": "^10.1.1",
+    "style-loader": "1.2.1",
+    "url-loader": "4.1.0",
+    "webpack": "4.43.0",
+    "webpack-cli": "3.3.12"
+  },
+  "dependencies": {
+    "axios": "^0.21.0",
+    "body-parser": "1.19.0",
+    "classnames": "2.2.6",
+    "cors": "^2.8.5",
+    "custom-electron-titlebar": "^3.2.6",
+    "dotenv": "^8.2.0",
+    "electron-log": "^4.3.2",
+    "electron-store": "^7.0.1",
+    "esm": "^3.2.25",
+    "express": "4.17.1",
+    "lightweight-charts": "^3.3.0",
+    "morgan": "^1.10.0",
+    "node-binance-api": "^0.12.4",
+    "node-fetch": "^2.6.1",
+    "node-machine-id": "^1.1.12",
+    "portastic": "^1.0.1",
+    "react": "16.13.1",
+    "react-dom": "16.13.1",
+    "react-loader-spinner": "^4.0.0",
+    "react-notifications-component": "3.0.3",
+    "react-router-dom": "5.2.0",
+    "react-tooltip": "^4.2.13",
+    "rodal": "^1.8.1"
+  },
+  "babel": {
+    "presets": [
+      [
+        "@babel/preset-env",
+        {
+          "modules": false
+        }
+      ],
+      "@babel/preset-react"
+    ],
+    "plugins": [
+      "@babel/plugin-proposal-class-properties",
+      "@babel/plugin-transform-runtime"
+    ]
+  },
+  "postcss": {
+    "plugins": {
+      "postcss-import": {},
+      "postcss-cssnext": {
+        "browsers": [
+          "last 2 versions",
+          "> 5%"
+        ]
+      },
+      "postcss-nesting": {}
+    }
+  }
+}
