@@ -1,6 +1,6 @@
 {
   "name": "smart-trader",
-  "version": "1.8.0",
+  "version": "2.0.0",
   "description": "A cryptocurrency service provider interface",
   "productName": "SmartTrader",
   "main": "electron.js",
