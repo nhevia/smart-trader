@@ -1,12 +1,12 @@
 import React, { useReducer } from 'react'
-import { initialStateApp, AppContext, reducer } from './Context/AppContext'
-import Header from './Components/Layout/Header'
-import ListContainer from './Components/ListContainer/ListContainer'
-import ResultFeedback from './Components/ResultFeedback/ResultFeedback'
 import ReactNotification from 'react-notifications-component'
-import 'react-notifications-component/dist/theme.css'
-import './Style/style.scss'
 const customTitlebar = require('custom-electron-titlebar')
+import { initialStateApp, AppContext, reducer } from 'context/AppContext'
+import Header from 'components/Layout/Header'
+import ListContainer from 'components/ListContainer/ListContainer'
+import ResultFeedback from 'components/ResultFeedback/ResultFeedback'
+import 'react-notifications-component/dist/theme.css'
+import 'style/style.scss'
 
 // changed font-size in class "".titlebar .window-title"
 // file located in node_modules/custom-electron-titlebar/lib/themebar.js

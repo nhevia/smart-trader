@@ -1,8 +1,8 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import IconTrade from '../../assets/trade.svg'
-import IconAnalysis from '../../assets/market-analysis.svg'
-import IconTsl from '../../assets/trend.svg'
+import IconTrade from 'assets/trade.svg'
+import IconAnalysis from 'assets/market-analysis.svg'
+import IconTsl from 'assets/trend.svg'
 
 const NavButtons = () => {
   return (

@@ -1,16 +1,21 @@
 require = require('esm')(module)
 const electron = require('electron')
+const Store = require('electron-store')
+const console = require('console')
+const getOpenPort = require('./app')
+
 const app = electron.app
 const BrowserWindow = electron.BrowserWindow
 const nativeImage = electron.nativeImage
-const console = require('console')
-const getOpenPort = require('./app')
-const Store = require('electron-store')
+
 Store.initRenderer()
 
 try {
   require('electron-reloader')(module)
 } catch {}
+
+const path = require('path')
+const url = require('url')
 
 let mainWindow
 

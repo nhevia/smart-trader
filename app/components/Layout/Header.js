@@ -1,10 +1,9 @@
 import React, { useState, useEffect } from 'react'
-import ConfigModal from '../Modals/ConfigModal'
-const config = require('../../../env.json')
 const Store = require('electron-store')
 const store = new Store({ watch: true })
 const storeExchange = new Store({ name: 'exchangeInfo' })
-import IconSettings from '../../assets/settings.svg'
+import ConfigModal from 'components/Modals/ConfigModal'
+import IconSettings from 'assets/settings.svg'
 
 const Header = () => {
   const [lastSyncTime, setLastSyncTime] = useState('loading...')

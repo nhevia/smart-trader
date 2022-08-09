@@ -2,12 +2,12 @@ import express from 'express'
 import crypto from 'crypto'
 import axios from 'axios'
 const fetch = require('node-fetch')
-const router = express.Router()
-import { roundFloor } from '../utils/mathExtra'
-const config = require('../env.json')
+const log = require('electron-log')
 const Store = require('electron-store')
 const store = new Store()
-const log = require('electron-log')
+const router = express.Router()
+const config = require('../config.json')
+import { roundFloor } from '../utils/mathExtra'
 
 router.post('/quickTrade/:symbols', async (req, res) => {
   log.info('========== Starts buy order =============')

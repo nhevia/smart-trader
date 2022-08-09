@@ -1,12 +1,12 @@
 import React, { useState, useEffect, useContext } from 'react'
-import { AppContext } from '../../Context/AppContext'
+import ReactTooltip from 'react-tooltip'
 const Store = require('electron-store')
 const storeExchange = new Store({ name: 'exchangeInfo' })
 const storeConfig = new Store({ name: 'config' })
 const Binance = require('node-binance-api')
-import Information from './Information'
-import ReactTooltip from 'react-tooltip'
-import IconInformation from '../../assets/information.svg'
+import { AppContext } from 'context/AppContext'
+import Information from 'components/ItemList/Information'
+import IconInformation from 'assets/information.svg'
 
 const binance = new Binance().options({
   APIKEY: storeConfig.get('config.k'),

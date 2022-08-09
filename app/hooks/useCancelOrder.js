@@ -1,8 +1,8 @@
-import React, { useEffect, useContext } from 'react'
-import { AppContext } from '../../Context/AppContext'
+import { useEffect, useContext } from 'react'
+import { AppContext } from 'context/AppContext'
 import { store as storeNotification } from 'react-notifications-component'
 
-const useCancelOrder = (order, onlyShowOrders) => {
+const useCancelOrder = (order) => {
   const { dispatch } = useContext(AppContext)
   useEffect(() => {
     if (order) {

@@ -1,10 +1,9 @@
 import React from 'react'
-import { createChart } from 'lightweight-charts'
-
 const Binance = require('node-binance-api')
 const binance = new Binance().options({
   reconnect: false,
 })
+import { createChart } from 'lightweight-charts'
 
 let chart
 let candlestickSeries
