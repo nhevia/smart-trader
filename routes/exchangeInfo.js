@@ -1,7 +1,7 @@
 import express from 'express'
 const fetch = require('node-fetch')
 const router = express.Router()
-const config = require('../env.json')
+const config = require('../config.json')
 
 // gets daily exchange info (all symbol pairs with their filters, etc)
 router.get('/getExchangeInfo', async (req, res) => {

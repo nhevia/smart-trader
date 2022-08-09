@@ -1,5 +1,3 @@
-import dotenv from 'dotenv'
-dotenv.config()
 import express from 'express'
 const bodyParser = require('body-parser')
 const path = require('path')
@@ -12,7 +10,7 @@ const app = express()
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: false }))
 
-if (process.env.CURRENT_ENV === 'dev') {
+if (process.env.NODE_ENV === 'development') {
   app.use(express.static(path.join(__dirname, 'public')))
   const responseTime = require('response-time')
   app.use(responseTime())

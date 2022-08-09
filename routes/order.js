@@ -6,7 +6,7 @@ const log = require('electron-log')
 const Store = require('electron-store')
 const store = new Store()
 const router = express.Router()
-const config = require('../env.json')
+const config = require('../config.json')
 import { roundFloor } from '../utils/mathExtra'
 
 router.post('/quickTrade/:symbols', async (req, res) => {

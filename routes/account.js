@@ -2,7 +2,7 @@ import express from 'express'
 import crypto from 'crypto'
 import axios from 'axios'
 const router = express.Router()
-const config = require('../env.json')
+const config = require('../config.json')
 
 router.post('/account_status', async (req, res) => {
   const queryString = `timestamp=${Date.now()}`

@@ -9,7 +9,7 @@
   },
   "scripts": {
     "start": "electron .",
-    "dev": "concurrently \"webpack --watch --display=minimal --info-verbosity none\" \"electron .\"",
+    "dev": "concurrently \"webpack --watch --display=minimal --info-verbosity none\" \"NODE_ENV=development  electron .\"",
     "build": "rimraf ./public && mkdir public && webpack --progress",
     "package": "electron-packager ./public --arch=x64 --platform=darwin,linux,win32 --overwrite --icon=packaging/icon.ico",
     "pub-build": "npm run build && npm run pub-copyfiles",
