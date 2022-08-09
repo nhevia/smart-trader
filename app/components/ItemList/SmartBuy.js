@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useContext } from 'react'
-import { AppContext } from '../../Context/AppContext'
+import { AppContext } from '../../context/AppContext'
 const Store = require('electron-store')
 const storeExchange = new Store({ name: 'exchangeInfo' })
 import Information from './Information'

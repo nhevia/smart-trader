@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useContext } from 'react'
-import { AppContext } from '../../Context/AppContext'
+import { AppContext } from '../../context/AppContext'
 import useCancelOrder from './CancelOrder'
 
 const useCurrentOrders = (visible, setVisible) => {

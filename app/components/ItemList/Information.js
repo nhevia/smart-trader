@@ -1,9 +1,9 @@
 import React, { useState, useContext } from 'react'
-import { AppContext } from '../../Context/AppContext'
+import { AppContext } from '../../context/AppContext'
 import useCurrentOrders from '../Orders/CurrentOrders'
 import Candlestick from '../Charts/Candlestick'
 const coinImages = require.context('../../assets/coins', true)
-import '../../Style/table.scss'
+import '../../style/table.scss'
 
 const ItemList = () => {
   const [pairLive, setPairLive] = useState()
