@@ -1,11 +1,11 @@
 import express from 'express'
 import axios from 'axios'
 import crypto from 'crypto'
-const router = express.Router()
-const config = require('../env.json')
+const fetch = require('node-fetch')
 const Store = require('electron-store')
 const store = new Store()
-const fetch = require('node-fetch')
+const router = express.Router()
+const config = require('../env.json')
 
 // returns all coins balance of a wallet
 router.get('/walletStatus/dump', async (req, res) => {

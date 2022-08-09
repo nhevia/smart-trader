@@ -1,8 +1,7 @@
 import express from 'express'
 import axios from 'axios'
-const config = require('../env.json')
-
 const router = express.Router()
+const config = require('../env.json')
 
 // given a pair symbol (ex: XRPUSDT) return current price
 router.get('/getPair/currentPrice/:symbol', async (req, res) => {

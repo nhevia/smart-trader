@@ -1,18 +1,13 @@
 import dotenv from 'dotenv'
 dotenv.config()
 import express from 'express'
-import {
-  getPair,
-  wallet,
-  order,
-  exchangeInfo,
-  account,
-} from './routes/index.js'
 const bodyParser = require('body-parser')
-const app = express()
 const path = require('path')
 const cors = require('cors')
 const portastic = require('portastic')
+import { getPair, wallet, order, exchangeInfo, account } from './routes'
+
+const app = express()
 
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: false }))

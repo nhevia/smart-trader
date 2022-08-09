@@ -1,6 +1,6 @@
 import express from 'express'
-const router = express.Router()
 const fetch = require('node-fetch')
+const router = express.Router()
 const config = require('../env.json')
 
 // gets daily exchange info (all symbol pairs with their filters, etc)
