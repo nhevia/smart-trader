@@ -1,13 +1,13 @@
 import React, { useState, useEffect, useContext } from 'react'
-import { AppContext } from '../../context/AppContext'
+import ReactTooltip from 'react-tooltip'
+import { store as storeNotification } from 'react-notifications-component'
 const Store = require('electron-store')
 const storeExchange = new Store({ name: 'exchangeInfo' })
-import Information from './Information'
-import useCancelOrder from '../Orders/CancelOrder'
-import ReactTooltip from 'react-tooltip'
-import IconInformation from '../../assets/information.svg'
-import Candlestick from '../Charts/Candlestick'
-import { store as storeNotification } from 'react-notifications-component'
+import { AppContext } from 'context/AppContext'
+import useCancelOrder from 'hooks/useCancelOrder'
+import Information from 'components/ItemList/Information'
+import Candlestick from 'components/Charts/Candlestick'
+import IconInformation from 'assets/information.svg'
 
 const SmartBuy = () => {
   const [quickTradeTokenState, setQuickTradeTokenState] = useState()

@@ -1,9 +1,9 @@
 import React from 'react'
 import { Route, Switch, Redirect } from 'react-router-dom'
-import SmartBuy from '../ItemList/SmartBuy'
-import Tsl from '../ItemList/Tsl'
-import Information from '../ItemList/Information'
-import NavButtons from '../Navigation/NavButtons'
+import SmartBuy from 'components/ItemList/SmartBuy'
+import Tsl from 'components/ItemList/Tsl'
+import Information from 'components/ItemList/Information'
+import NavButtons from 'components/Navigation/NavButtons'
 
 const ListContainer = () => {
   return (

@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useContext } from 'react'
-import { AppContext } from '../../context/AppContext'
-import useCancelOrder from './CancelOrder'
+import { AppContext } from 'context/AppContext'
+import useCancelOrder from 'hooks/useCancelOrder'
 
 const useCurrentOrders = (visible, setVisible) => {
   const [orderToCancel, setOrderToCancel] = useState()

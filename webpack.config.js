@@ -21,6 +21,11 @@ module.exports = {
   resolve: {
     alias: {
       ws: './node_modules/ws/index.js',
+      components: path.resolve(__dirname, 'app/components'),
+      assets: path.resolve(__dirname, 'app/assets'),
+      context: path.resolve(__dirname, 'app/context'),
+      style: path.resolve(__dirname, 'app/style'),
+      hooks: path.resolve(__dirname, 'app/hooks'),
     },
   },
   module: {

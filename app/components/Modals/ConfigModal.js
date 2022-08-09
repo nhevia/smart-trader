@@ -1,8 +1,8 @@
 import React, { useState, useRef } from 'react'
+import Rodal from 'rodal'
 const Store = require('electron-store')
 const store = new Store()
-import Rodal from 'rodal'
-import '../../style/rodal.scss'
+import 'style/rodal.scss'
 
 const ConfigModal = ({ isVisible, setIsVisible }) => {
   const [key, setKey] = useState()

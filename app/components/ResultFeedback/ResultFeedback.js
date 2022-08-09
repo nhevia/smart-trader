@@ -1,6 +1,6 @@
-import React, { useEffect, useContext } from 'react'
-import { AppContext } from '../../context/AppContext'
-import Spinner from '../Loader/Spinner'
+import React, { useContext } from 'react'
+import { AppContext } from 'context/AppContext'
+import Spinner from 'components/Loader/Spinner'
 
 const ResultFeedback = () => {
   const { store } = useContext(AppContext)
